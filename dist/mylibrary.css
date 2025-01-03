@@ -1,0 +1,39 @@
+/* Основные переменные */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-family: Arial, sans-serif;
+}
+
+/* Базовые стили */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+/* Компоненты */
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Утилиты */
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
