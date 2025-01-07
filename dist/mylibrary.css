@@ -1,104 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-/* === Базовые настройки для обеих тем === */
+/* === Базовые настройки === */
 :root {
   --font-family: 'Inter', sans-serif;
   --transition-duration: 0.3s;
   --border-radius: 8px;
-
-  /* Цвета светлой темы */
-  --bg-color-light: #ffffff;
-  --text-color-light: #1a1a1a;
-  --accent-color-light: #0077ff;
-  --border-color-light: #e0e0e0;
-
-  /* Цвета тёмной темы */
-  --bg-color-dark: #1a1a1a;
-  --text-color-dark: #ffffff;
-  --accent-color-dark: #00aaff;
-  --border-color-dark: #333333;
 }
 
-/* === Стили для светлой темы === */
-[data-theme="light"] {
-  --bg-color: var(--bg-color-light);
-  --text-color: var(--text-color-light);
-  --accent-color: var(--accent-color-light);
-  --border-color: var(--border-color-light);
-}
-
-/* === Стили для тёмной темы === */
-[data-theme="dark"] {
-  --bg-color: var(--bg-color-dark);
-  --text-color: var(--text-color-dark);
-  --accent-color: var(--accent-color-dark);
-  --border-color: var(--border-color-dark);
-}
-
-/* === Базовые элементы интерфейса === */
-body {
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color var(--transition-duration), color var(--transition-duration);
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
-}
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color var(--transition-duration);
-}
-
-a:hover {
-  color: var(--accent-color-hover);
-}
-
-button {
-  background-color: var(--accent-color);
-  color: var(--text-color-dark);
-  border: none;
+/* === Кнопки светлой темы === */
+.button-light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #e0e0e0;
   border-radius: var(--border-radius);
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color var(--transition-duration);
+  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
-button:hover {
-  background-color: var(--accent-color-hover);
+.button-light:hover {
+  background-color: #f0f0f0;
 }
 
-input, textarea {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
+/* === Кнопки тёмной темы === */
+.button-dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
   border-radius: var(--border-radius);
-  padding: 10px;
-  transition: border-color var(--transition-duration);
-}
-
-input:focus, textarea:focus {
-  border-color: var(--accent-color);
-}
-
-/* === Переключение темы === */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: var(--accent-color);
-  color: var(--text-color-dark);
-  border: none;
-  border-radius: var(--border-radius);
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
-.theme-toggle:hover {
-  background-color: var(--accent-color-hover);
+.button-dark:hover {
+  background-color: #333333;
+}
+
+/* === Общие элементы страницы === */
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
 }
